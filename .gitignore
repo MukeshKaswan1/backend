@@ -1,0 +1,23 @@
+# ── Go ──────────────────────────────────
+backend/server
+backend/backend
+backend/uploads/
+backend/.env
+
+# ── Node / Next.js ───────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.env
+frontend/.vercel/
+
+# ── OS & Editors ─────────────────────────
+.DS_Store
+*.pem
+*.log
+.idea/
+.vscode/
+
+# ── Secrets ──────────────────────────────
+*.env
+*.env.local
