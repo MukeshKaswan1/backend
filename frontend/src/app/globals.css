@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-primary: #0066FF;
+    --brand-primary-hover: #0052CC;
+    --brand-secondary: #3385FF;
+    
+    --surface-bg: #F8F9FA;
+    --surface-paper: #FFFFFF;
+    --surface-border: #E2E8F0;
+    
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+  }
+
+  .dark {
+    --brand-primary: #66A3FF;
+    --brand-primary-hover: #99C2FF;
+    --brand-secondary: #99C2FF;
+    
+    --surface-bg: #0B0F19;
+    --surface-paper: #1E293B;
+    --surface-border: #334155;
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+
+  body {
+    @apply transition-colors duration-200 bg-surface-background text-txt-primary;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
