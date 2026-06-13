@@ -39,7 +39,6 @@ func main() {
 	}
 
 	// Set up CORS
-	// NOTE: rs/cors does NOT support wildcard subdomains (*.vercel.app) when
 	// AllowCredentials is true — always use exact origin URLs.
 	allowedOrigins := []string{
 		"http://localhost:3000",

@@ -50,8 +50,8 @@ func InitDB() {
 		u, err := url.Parse(dbURL)
 		if err == nil {
 			q := u.Query()
-			q.Del("schema")           // Prisma-style param, not valid in lib/pq
-			q.Del("channel_binding")  // NeonDB param, not supported by lib/pq
+			q.Del("schema")          // Prisma-style param, not valid in lib/pq
+			q.Del("channel_binding") // NeonDB param, not supported by lib/pq
 			u.RawQuery = q.Encode()
 			dbURL = u.String()
 		}
